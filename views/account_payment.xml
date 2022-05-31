@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 Munin
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="account_payment_form_view">
+        <field name="name">account.payment.form (in l10n_mx_edi_cancel_fix)</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <!-- TODO -->
+            <xpath expr="//group[1]//group[1]" position="after">
+                <field name="edi_cancel_reason_id"/>
+                <field name="replace_folio" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>
